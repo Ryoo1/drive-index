@@ -57,7 +57,7 @@ const authConfig = {
 
 const uiConfig = {
     "version": "2.0.25", // don't touch this one. get latest code using generator at https://bdi-generator.hashhackers.com
-    "jsdelivr_cdn_src": "https://cdn.jsdelivr.net/npm/@googledrive/index", // If Project is Forked, then enter your GitHub repo
+    "jsdelivr_cdn_src": "https://cdn.jsdelivr.net/npm/drive-index-workers", // If Project is Forked, then enter your GitHub repo
 };
 
 // DON'T TOUCH BELOW THIS UNLESS YOU KNOW WHAT YOU'RE DOING
