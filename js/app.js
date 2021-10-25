@@ -149,7 +149,7 @@ function nav(path) {
     });
     html += `</div></li>`;
 
-    html += `<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${UI.nav_link_3}</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item"  href="/">> Home</a>`;
+    html += `<li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">${UI.nav_link_3}</a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item"  href="/">> Beranda</a>`;
 
     if (!model.is_search_page) {
         var arr = path.trim('/').split('/');
@@ -945,14 +945,14 @@ function file_video(path) {
   <video id="vplayer" width="100%" height="100%" playsinline controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'settings', 'pip', 'airplay', 'fullscreen']; data-plyr-config="{ "title": "${decodename}"}" data-poster="${poster}" style="--plyr-captions-text-color: #ffffff;--plyr-captions-background: #000000;">
     <source src="${url}" type="video/mp4" />
     <source src="${url}" type="video/webm" />
-    <track kind="captions" label="Default" src="${caption}.vtt" srclang="en" />
+    <track kind="captions" label="Default" src="${caption}.srt" srclang="en" />
     <track kind="captions" label="English" src="${caption}.en.vtt" srclang="en" default />
     <track kind="captions" label="Hindi" src="${caption}.hi.vtt" srclang="hi" />
     <track kind="captions" label="Russian" src="${caption}.ru.vtt" srclang="ru" />
     <track kind="captions" label="Malayalam" src="${caption}.ml.vtt" srclang="ml" />
     <track kind="captions" label="Korean" src="${caption}.ko.vtt" srclang="ko" />
     <track kind="captions" label="Japanese" src="${caption}.ja.vtt" srclang="ja" />
-    <track kind="captions" label="Indonesian" src="${caption}.id.vtt" srclang="id" />
+    <track kind="captions" label="Indonesia" src="${caption}.id.srt" srclang="id" />
     <track kind="captions" label="German" src="${caption}.de.vtt" srclang="de" />
     <track kind="captions" label="French" src="${caption}.fr.vtt" srclang="fr" />
     <track kind="captions" label="Chinese" src="${caption}.zh.vtt" srclang="zh" />
@@ -1065,7 +1065,7 @@ function file_audio(path) {
         <a class="dropdown-item" href="intent:${url}#Intent;component=idm.internet.download.manager.plus/idm.internet.download.manager.Downloader;S.title=${decodename};end">1DM+ (Plus)</a>
       </div>
   </div>
-  <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></div><br>
+  <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Salin</span> </button></div><br>
   </div>
   </div>
   </div>
@@ -1079,7 +1079,7 @@ function file_audio(path) {
     </div><p>The requested URL was not found on this server. That’s all we know.</p>
       <div class="card-text text-center">
       <div class="btn-group text-center">
-        <a href="/" type="button" class="btn btn-primary">Homepage</a>
+        <a href="/" type="button" class="btn btn-primary">Beranda</a>
       </div>
         </div><br>
 </div>
@@ -1195,7 +1195,7 @@ function file_pdf(path) {
         <a class="dropdown-item" href="intent:${url}#Intent;component=idm.internet.download.manager.plus/idm.internet.download.manager.Downloader;S.title=${decodename};end">1DM+ (Plus)</a>
       </div>
   </div>
-  <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></div><br>
+  <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Salin</span> </button></div><br>
   </div>
   </div>
   </div>
@@ -1303,7 +1303,7 @@ function file_image(path) {
         <a class="dropdown-item" href="intent:${url}#Intent;component=idm.internet.download.manager.plus/idm.internet.download.manager.Downloader;S.title=${decodename};end">1DM+ (Plus)</a>
       </div>
   </div>
-  <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Copy</span> </button></div><br>
+  <button onclick="copyFunction()" onmouseout="outFunc()" class="btn btn-success"> <span class="tooltiptext" id="myTooltip">Salin</span> </button></div><br>
   </div>
   </div>
   </div>
@@ -1460,12 +1460,12 @@ function copyFunction() {
     var copyText = document.getElementById("dlurl");
     copyText.select();
     copyText.setSelectionRange(0, 99999);
-    document.execCommand("copy");
+    document.execCommand("Salin");
     var tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copied";
+    tooltip.innerHTML = "Tersalin";
 }
 
 function outFunc() {
     var tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copy";
+    tooltip.innerHTML = "Salin";
 }
